@@ -2,7 +2,7 @@
 # verificar e escrever se existem números repetidos no vetor VET e em que posições se encontram.
 
 # Ler os nº
-n = 8
+n = 50
 vet = [0] * n
 
 for i in range (n):
@@ -14,18 +14,17 @@ print(vet)
 rept = []
 lis = []
 
-for n in vet:
-    if n not in lis:
-        lis.append(n)
+for i in vet:
+    if i not in lis:
+        lis.append(i)
     else:
-        rept.append(n)
+        rept.append(i)
 
 print("Nº repetidos: {}".format(rept))
 
 # Posição do nº
-lis = []
-for lis in rept:
-    if lis not in lis:
-        lis.append(lis)
-print("Posição: {}".format(lis))
-
+indice = []
+for i in rept:
+    indice.append(vet.index(i))
+    
+print("Posição: {}".format(indice))
