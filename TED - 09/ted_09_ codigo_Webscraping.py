@@ -1,3 +1,6 @@
+# Lisa Tagliaferri - Developer and author at DigitalOcean.
+# https://www.digitalocean.com/community/tutorials/como-fazer-scraping-em-paginas-web-com-beautiful-soup-and-python-3-pt
+
 '''
 1 - Criar uma variável de ambiente
 2 - Instalar o requests e o BeautifulSoup4
@@ -12,8 +15,8 @@ f.writerow(['Name', 'Link'])
 
 pages = []
 
-for i in range(1, 5):
-    url = 'https://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anS' + str(i) + '.htm'
+for i in range(1, 3):
+    url = 'https://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anZ' + str(i) + '.htm'
     pages.append(url)
 
 
