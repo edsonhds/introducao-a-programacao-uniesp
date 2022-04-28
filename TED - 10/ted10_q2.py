@@ -1,30 +1,28 @@
 # Faça um algoritmo para ler 50 números e armazenar em um vetor VET, 
 # verificar e escrever se existem números repetidos no vetor VET e em que posições se encontram.
 
-# Ler os nº
-n = 50
-vet = [0] * n
+import random
 
-for i in range (n):
-    vet [i] = input ("Digite o valor {atual} de {total}: ".format(atual = i+1, total = n))
+n = 50
+vet = []
+
+for i in range(0, n):
+    vet.append(random.randint(1, 10))
 
 print(vet)
 
-# Mostra os nº repetidos
-rept = []
-lis = []
+checked = []
 
 for i in vet:
-    if i not in lis:
-        lis.append(i)
-    else:
-        rept.append(i)
+    positions = []
 
-print("Nº repetidos: {}".format(rept))
+    if i not in checked:
+        checked.append(i)
 
-# Posição do nº
-indice = []
-for i in rept:
-    indice.append(vet.index(i))
-    
-print("Posição: {}".format(indice))
+        for j in range(0, len(vet)):
+            if vet[j] == i:
+                positions.append(j)
+
+        if len(positions) > 1:
+            print("O número {numero} aparece nas posições: {posicoes}".format(numero=i, posicoes=positions))
+ 
