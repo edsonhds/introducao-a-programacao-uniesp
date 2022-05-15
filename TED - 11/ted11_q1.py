@@ -1,5 +1,5 @@
 # Consutra uma matriz A de tamanho 10 x 10 com valores inteiros e randômicos. 
-# Depois Imprima o resultado da soma de todos os valores da matriz no terminal, depois;
+# Depois Imprima o resultado da soma de todos os valores da matriz A no terminal;
 # Depois construa uma nova matriz B, no qual cada item seja o valor da matriz A * 3.
 
 import random
@@ -27,4 +27,3 @@ for i in range(len(m)):
 print(soma)
 
 print(b)
-   
