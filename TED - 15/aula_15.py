@@ -1,3 +1,13 @@
+# Desenvolva um programa usando os recursos que já foram fornecidos: if, elif, while, for, listas, dicionários.
+# Não precisa usar todos, apenas os que determinam.
+# Desenvolva ao um que apresenta as seguintes opções usuário:
+#1 - Cadastrar um funcionário
+# 2 - Alterar um funcionário
+# 3 - Listar (imprimir) todos os funcionários
+# 4 - Excluir um funcionário
+# 5 - Adicione um aumento de salário
+# Sabendo que todos os funcionários cadastrados, precisam ter no mínimo os dados: Código do Funcionário, Nome, E-mail, Admissão e Salário.
+
 import random
 
 controle = 1
