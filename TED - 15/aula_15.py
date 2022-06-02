@@ -9,10 +9,8 @@
 # Sabendo que todos os funcionários cadastrados, precisam ter no mínimo os dados: Código do Funcionário, Nome, E-mail, Admissão e Salário.
 
 import random
-
 controle = 1
 cadastros = []
-
 while controle != 0:
     #Painel principal
     print('='*100)
@@ -30,9 +28,7 @@ while controle != 0:
     if controle == 1:
         #Cadastrando um funcionario
         print('='*100)
-
         funcionario = {'Codigo': None, 'Nome': None, 'E-mail': None, 'Admissão': None, 'Salário': None}
-
         funcionario['Codigo'] = random.randint(1, 1000)
         gerando = 1
         codigos_gerados = []
@@ -51,14 +47,11 @@ while controle != 0:
                         funcionario['Codigo'] = codigo
                         corrigindo = 0
                         gerando = 0
-
         funcionario['Nome'] = input('Digite o nome do funcionario: ')
         funcionario['E-mail'] = input('Digite o E-mail do funcionario: ')
         funcionario['Admissão'] = input('Digite a data de adimissão do funcionario: ')
         funcionario['Salário'] = float(input('Digite o salário(apenas numeros) do funcionario: '))
-
         cadastros.append(funcionario)
-
         print(f'Casdastro de funcionario concluido, codigo de cadastro é {funcionario["Codigo"]} , voltando ao painel principal.')
         print('='*100)
         print('\n')
@@ -84,7 +77,6 @@ while controle != 0:
                     print('0 - encerrar a alteração')
                     print('\n')
                     opcoes = int(input('Digite a opção: '))
-
                     if opcoes == 1:
                         repetir = -1
                         while repetir == -1:
@@ -99,25 +91,35 @@ while controle != 0:
                                 fc['Codigo'] = NovoCodigo
                                 print('\n')
                                 print('Alteração concluida!')
-
                                 
                     elif opcoes == 2:
+
                         fc['Nome'] = (input('Digite o novo Nome: '))
-                    
+                        print('\n')
+                        print('Alteração concluida!')
+
                     elif opcoes == 3:
+
                         fc['E-mail'] = (input('Digite o novo E-mail: '))
-                    
+                        print('\n')
+                        print('Alteração concluida!')
+
                     elif opcoes == 4:
+
                         fc['Admissão'] = (input('Digite a nova data de Admissão: '))
-                    
+                        print('\n')
+                        print('Alteração concluida!')
+
                     elif opcoes == 5:
+
                         fc['Salário'] = float(input('Digite o novo salario(apenas numeros): '))
+                        print('\n')
+                        print('Alteração concluida!')
         print('='*100)
         print('\n')
 
     elif controle == 3:
         #Listando a lista de funcionario 
-
         print('='*100)    
         if cadastros == []:
             print('Sem cadastro')
@@ -126,27 +128,32 @@ while controle != 0:
             for f in cadastros:
                 print(f)
                 
+            
         print('='*100)
         print('\n')
-
+        
     elif controle == 4:
         #Excluindo um funcionario
         print('='*100)
         print('\n')
-        codigo = int(input('Digite o codigo do funcionario que deseja excluir: '))  
+        codigo = int(input('Digite o codigo do funcionario que deseja excluir: '))
+        fu_ex = 0
         for i in range(0, len(cadastros)):
             fc = cadastros[i]
                 
             if (codigo == fc['Codigo']):
-                print(cadastros[i])
+                print(fc)
                 
                 print('Deseja excluir esse funcionario?')
                 print('0 - Não')
                 print('1 - Sim')
                 opcoes = input('Digte a opcão: ')
-
                 if opcoes == '1':
-                    del cadastros[i]
+                    fu_ex = fc
+        if fu_ex == 0:
+            pass
+        else:
+            cadastros.remove(fu_ex)
                     
         print('='*100)
         print('\n')
@@ -165,6 +172,7 @@ while controle != 0:
                 fc['Salário'] = Aumento + fc['Salário']
         print('='*100)
         print('\n')
+                    
     
     elif controle == 0:
         #finalizando do programa
