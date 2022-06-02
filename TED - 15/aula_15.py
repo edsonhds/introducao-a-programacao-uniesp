@@ -1,3 +1,10 @@
+# GRUPO:
+# EDSON HENRIQUE
+# JOÃO GABRIEL GONÇALVES
+# NAYARA OLIVEIRA
+# WILLIAME FARIAS 
+# ----------------------------------------------------
+ 
 # Desenvolva um programa usando os recursos que já foram fornecidos: if, elif, while, for, listas, dicionários.
 # Não precisa usar todos, apenas os que determinam.
 # Desenvolva ao um que apresenta as seguintes opções usuário:
